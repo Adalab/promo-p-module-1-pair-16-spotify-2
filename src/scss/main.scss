@@ -1,8 +1,268 @@
-@import 'core/variables';
-@import 'core/reset';
-@import 'components/code';
-@import 'components/links';
-@import 'layout/page';
-@import 'layout/header';
-@import 'layout/footer';
-@import 'pages/index';
+@import "core/variables";
+@import "core/reset";
+@import "components/code";
+@import "components/links";
+@import "layout/page";
+@import "layout/header";
+@import "layout/footer";
+@import "pages/index";
+
+:root {
+  font-family: "Roboto";
+  --color_1: black;
+  --color_2: white;
+  --background_main: white;
+  --background_premium: rgb(68, 163, 226);
+  --background_header_footer: black;
+}
+
+body {
+  background-color: var(--background_premium);
+  padding: 0;
+}
+
+.nav-1 {
+  display: none;
+  color: var(--color_2);
+}
+
+.list-item {
+  margin: 5px;
+}
+
+.list-1 {
+  display: flex;
+  list-style: none;
+}
+
+.list-2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  list-style: none;
+  padding: 0;
+  gap: 10px;
+  margin-bottom: 45px;
+  line-height: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color_2);
+}
+
+.spotify-logo {
+  width: 100px;
+}
+
+h1 {
+  font-size: 45px;
+  color: var(--color_2);
+  margin-top: 60px;
+}
+
+.text-million-songs {
+  font-size: 27px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-1,
+.container-2,
+.container-3,
+.container-4 {
+  border: solid 3px rgb(255, 0, 0);
+  box-sizing: border-box;
+}
+
+.container-1 {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: var(--background_header_footer);
+  color: var(--color_2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container-2 {
+  background-image: url(./assets/images/premium_dancer.png);
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: right;
+  background-size: contain;
+  background: none;
+  width: 100%;
+  color: var(--color_2);
+  padding: 30px;
+}
+
+.green-plan {
+  height: 50px;
+  width: 100%;
+  max-width: 380px;
+  border-radius: 30px;
+  background-color: rgb(81, 175, 62);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.conditions {
+  font-size: 15px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 40px;
+}
+
+.articles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 15px;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+}
+
+.text-articles {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.container-3 {
+  background-color: var(--background_main);
+  display: flex;
+  flex-direction: column;
+}
+
+.container-4 {
+  background-color: var(--background_header_footer);
+  color: var(--color_2);
+  display: flex;
+  justify-content: space-between;
+  height: 150px;
+}
+
+.legal {
+  letter-spacing: 2pt;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 20px;
+  font-size: 10px;
+  line-height: 40px;
+}
+
+.text-spain {
+  display: flex;
+  justify-content: space-evenly;
+  padding-right: 3px;
+  padding-top: 20px;
+  font-size: 15px;
+}
+
+.copyright {
+  padding-right: 20px;
+  font-size: 15px;
+}
+
+/*TABLET*/
+
+@media all and (min-width: 780px) {
+  .nav-1 {
+    display: flex;
+    flex-direction: row;
+    color: var(--color_2);
+    letter-spacing: 2pt;
+  }
+
+  .hamburguer {
+    display: none;
+  }
+
+  .container-2 {
+    background-image: url(../images/premium_dancer.png);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: right;
+    background-size: contain;
+  }
+
+  .articles {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .wrapper-1 {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 40px;
+  }
+
+  .legal {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+/*DESKTOP*/
+
+@media all and (min-width: 1000px) {
+  .container-3 {
+    display: flex;
+    align-content: center;
+  }
+
+  .articles {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .wrapper {
+    display: flex;
+    gap: 50px;
+  }
+
+  .wrapper-1 {
+    display: flex;
+    margin-left: 80px;
+    gap: 80px;
+    padding: 0px;
+  }
+
+  .wrapper-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 50px;
+  }
+}
